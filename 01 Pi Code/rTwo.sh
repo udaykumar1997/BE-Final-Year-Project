@@ -1,0 +1,10 @@
+python collectData.py; echo 1-10; sleep 3;
+python collectData.py; echo 2-10; sleep 3;
+python collectData.py; echo 3-10; sleep 3;
+python collectData.py; echo 4-10; sleep 3;
+python collectData.py; echo 5-10; sleep 3;
+python collectData.py; echo 6-10; sleep 3;
+python collectData.py; echo 7-10; sleep 3;
+python collectData.py; echo 8-10; sleep 3;
+python collectData.py; echo 9-10; sleep 3;
+python collectData.py; echo 10-10; sleep 3;
