@@ -5,3 +5,5 @@ sudo apt install python3-pip -y
 sudo pip3 install opencv-python 
 sudo apt install python-matplotlib python-numpy python-pil python-scipy build-essential cython python-skimage python3-skimage -y
 cp xstartup ../.vnc/
+wget https://repo.anaconda.com/archive/Anaconda3-2019.03-Linux-x86_64.sh
+wget https://repo.anaconda.com/archive/Anaconda3-2019.03-Linux-ppc64le.sh
