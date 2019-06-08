@@ -11,9 +11,9 @@ data = []
 
 # Worked on:
 '''
-python3.5 ./segmentation_2.py --input ./Annotated_Dataset/aio/2019-05-04-115147.png 
-python3.5 ./segmentation_2.py --input ./Annotated_Dataset/aio/2019-05-04-114702.png 
-python3.5 ./segmentation_2.py --input ./Annotated_Dataset/aio/2019-05-04-113838.png 
+python3.5 ./segmentation_2.py --input ./dataset/2019-05-04-115147.png 
+python3.5 ./segmentation_2.py --input ./dataset/2019-05-04-114702.png 
+python3.5 ./segmentation_2.py --input ./dataset/2019-05-04-113838.png 
 '''
 
 parser = argparse.ArgumentParser(description='Extract roses')
