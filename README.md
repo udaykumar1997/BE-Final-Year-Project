@@ -1,16 +1,9 @@
-BE-Final-Year-Project
-
-- 2019 Feb 18
-made first commit from GC Shell.
-
-2019-07-31
-license changed
+Real Time Precision Farming through Cloud Computer Vision and Deep Learning
 
 NOTE: this repo contains Large Files and requires git lfs to be cloned.
-to avoid downloading all the large files, use
-GIT_LFS_SKIP_SMUDGE=1 git clone SERVER-REPOSITORY
+to avoid downloading all the large files, use: `GIT_LFS_SKIP_SMUDGE=1 git clone SERVER-REPOSITORY`
 
-License
+### License
 
 Copyright 2019 Uday Kumar Adusumilli
 
