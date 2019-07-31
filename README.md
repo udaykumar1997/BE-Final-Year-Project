@@ -1,7 +1,6 @@
-Real Time Precision Farming through Cloud Computer Vision and Deep Learning
+# Real Time Precision Farming through Cloud Computer Vision and Deep Learning
 
-NOTE: this repo contains Large Files and requires git lfs to be cloned.
-to avoid downloading all the large files, use: `GIT_LFS_SKIP_SMUDGE=1 git clone SERVER-REPOSITORY`
+NOTE: This repo contains Large Files and requires git lfs to be cloned. To avoid downloading all the large files, use: `GIT_LFS_SKIP_SMUDGE=1 git clone SERVER-REPOSITORY`
 
 ### License
 
