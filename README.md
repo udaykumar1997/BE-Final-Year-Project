@@ -5,3 +5,23 @@ made first commit from GC Shell.
 
 2019-07-31
 license changed
+
+NOTE: this repo contains Large Files and requires git lfs to be cloned.
+to avoid downloading all the large files, use
+GIT_LFS_SKIP_SMUDGE=1 git clone SERVER-REPOSITORY
+
+License
+
+Copyright 2019 Uday Kumar Adusumilli
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
