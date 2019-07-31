@@ -3,11 +3,11 @@
 NOTE: This repo contains Large Files and requires *git lfs* to be cloned. To avoid downloading all the large files or lfs objects in any repo, use: `GIT_LFS_SKIP_SMUDGE=1 git clone SERVER-REPOSITORY`
 
 To clone this repo, use either of the following commands:
-`
+```
 git@github.com:udaykumar1997/Real-Time-Precision-Farming-through-Cloud-Computer-Vision-and-Deep-Learning.git
 
 https://github.com/udaykumar1997/Real-Time-Precision-Farming-through-Cloud-Computer-Vision-and-Deep-Learning.git
-`
+```
 
 ### License
 
