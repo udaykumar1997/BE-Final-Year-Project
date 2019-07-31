@@ -8,7 +8,7 @@ GIT_LFS_SKIP_SMUDGE=1 git clone git@github.com:udaykumar1997/Real-Time-Precision
 
 GIT_LFS_SKIP_SMUDGE=1 git clone https://github.com/udaykumar1997/Real-Time-Precision-Farming-through-Cloud-Computer-Vision-and-Deep-Learning.git
 ```
-
+a
 ### License
 
 Copyright 2019 Uday Kumar Adusumilli
