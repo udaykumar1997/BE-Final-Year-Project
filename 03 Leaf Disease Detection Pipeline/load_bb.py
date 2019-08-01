@@ -1,3 +1,20 @@
+# @Author: uday
+# @Date:   2019
+# @Email:  udaykumar.1997@gmail.com
+# @Last modified by:   uday
+# @Last modified time: 2019
+# @License: apache-2.0
+# @Copyright: #
+#  Copyright 2019 Uday Kumar Adusumilli
+#
+#  Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+#
+#	http://www.apache.org/licenses/LICENSE-2.0
+#
+#  Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+
+
+
 import cv2
 import io
 import random
@@ -9,14 +26,14 @@ import numpy as np
 #old_stdout= sys.stdout
 #sys.stdout = buf = StringIO()
 
-# Returns true if two rectangles overlap 
+# Returns true if two rectangles overlap
 def doOverlap(t1, t2):
-    rect1_x1 = t1[0] 
+    rect1_x1 = t1[0]
     rect1_x2 = t1[2]
     rect1_y1 = t1[1]
     rect1_y2 = t1[3]
 
-    rect2_x1 = t2[0] 
+    rect2_x1 = t2[0]
     rect2_x2 = t2[2]
     rect2_y1 = t2[1]
     rect2_y2 = t2[3]
@@ -29,7 +46,7 @@ def doOverlap(t1, t2):
         if (rect2_y1 <= rect1_y1 <= rect2_y2 or rect2_y1 <= rect1_y2 <= rect2_y2):
             return True
 
-    return False; 
+    return False;
 
 def checkAllOverlap(l_bbs, rect):
     for bb in l_bbs:
@@ -51,9 +68,9 @@ def genRandRect(l_bbs, inp_rect):
     res = False
 
     while( not res ):
-        x1, y1, x2, y2 = inp_rect 
-        h = y2 - y1 
-        w = x2 - x1 
+        x1, y1, x2, y2 = inp_rect
+        h = y2 - y1
+        w = x2 - x1
 
         y3 = random.randint(0, max_h-h)
         x3 = random.randint(0, max_w-w)

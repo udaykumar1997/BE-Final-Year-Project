@@ -1,3 +1,20 @@
+# @Author: uday
+# @Date:   2019
+# @Email:  udaykumar.1997@gmail.com
+# @Last modified by:   uday
+# @Last modified time: 2019
+# @License: apache-2.0
+# @Copyright: #
+#  Copyright 2019 Uday Kumar Adusumilli
+#
+#  Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+#
+#	http://www.apache.org/licenses/LICENSE-2.0
+#
+#  Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+
+
+
 import cv2
 import numpy as np
 import argparse
@@ -30,36 +47,36 @@ args = parser.parse_args()
 print("Reading file:", args.input)
 frame = cv2.imread(args.input)
 
-hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV) 
-lower_red = np.array([100,100,100]) 
-upper_red = np.array([179,255,255]) 
+hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+lower_red = np.array([100,100,100])
+upper_red = np.array([179,255,255])
 
-# Here we are defining range of red color in HSV 
-# This creates a mask of red coloured  
-# objects found in the frame 
-mask = cv2.inRange(hsv, lower_red, upper_red) 
+# Here we are defining range of red color in HSV
+# This creates a mask of red coloured
+# objects found in the frame
+mask = cv2.inRange(hsv, lower_red, upper_red)
 
-# The bitwise and of the frame and mask is done so  
-# that only the red coloured objects are highlighted  
-# and stored in res 
+# The bitwise and of the frame and mask is done so
+# that only the red coloured objects are highlighted
+# and stored in res
 
 gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
-res = cv2.bitwise_and(gray,gray, mask=mask) 
+res = cv2.bitwise_and(gray,gray, mask=mask)
 
 res = cv2.GaussianBlur(res, (11,11), 0)
 
 kernel = np.ones((11,11),np.uint8)
 res = cv2.morphologyEx(res, cv2.MORPH_CLOSE, kernel)
 
-# This displays the frame, mask  
-# and res which we created in 3 separate windows. 
-cv2.imshow('frame',frame) 
-cv2.imshow('mask',mask) 
-cv2.imshow('res',res) 
+# This displays the frame, mask
+# and res which we created in 3 separate windows.
+cv2.imshow('frame',frame)
+cv2.imshow('mask',mask)
+cv2.imshow('res',res)
 
 cv2.waitKey(0) & 0xFF
-cv2.destroyAllWindows() 
+cv2.destroyAllWindows()
 
 #-------------------- Thresholding -------------------#
 thresh = threshold_otsu(res)
@@ -93,9 +110,9 @@ for regs in regionprops(labs_flow):
 			# Resize the selected objects to 28X28
 			res_obj = resize(roi, (28, 28))
 
-			cv2.imshow('Object',res_obj) 
+			cv2.imshow('Object',res_obj)
 			cv2.waitKey(0) & 0xFF
-			cv2.destroyAllWindows() 
+			cv2.destroyAllWindows()
 
 			res_flat = res_obj.flatten()
 
@@ -108,4 +125,3 @@ rose_only = cv2.bitwise_and(frame, frame, mask=mask)
 cv2.imshow('Processed image', rose_only)
 if cv2.waitKey(0) == 9:
 	cv2.destroyAllWindows()
-

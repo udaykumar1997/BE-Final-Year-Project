@@ -1,3 +1,20 @@
+# @Author: uday
+# @Date:   2019
+# @Email:  udaykumar.1997@gmail.com
+# @Last modified by:   uday
+# @Last modified time: 2019
+# @License: apache-2.0
+# @Copyright: #
+#  Copyright 2019 Uday Kumar Adusumilli
+#
+#  Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+#
+#	http://www.apache.org/licenses/LICENSE-2.0
+#
+#  Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+
+
+
 import cv2
 import numpy as np
 import argparse
@@ -11,9 +28,9 @@ data = []
 
 # Worked on:
 '''
-python3.5 ./segmentation_2.py --input ./dataset/2019-05-04-115147.png 
-python3.5 ./segmentation_2.py --input ./dataset/2019-05-04-114702.png 
-python3.5 ./segmentation_2.py --input ./dataset/2019-05-04-113838.png 
+python3.5 ./segmentation_2.py --input ./dataset/2019-05-04-115147.png
+python3.5 ./segmentation_2.py --input ./dataset/2019-05-04-114702.png
+python3.5 ./segmentation_2.py --input ./dataset/2019-05-04-113838.png
 '''
 
 parser = argparse.ArgumentParser(description='Extract roses')
@@ -40,7 +57,7 @@ contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
 
 for contour in contours:
     area = cv2.contourArea(contour)
-    x,y,w,h = cv2.boundingRect(contour) 
+    x,y,w,h = cv2.boundingRect(contour)
 
     # draw a red 'nghien' rectangle
     if (30000.0 > area > 300.0):
